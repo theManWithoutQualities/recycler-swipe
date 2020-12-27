@@ -28,7 +28,7 @@ class ItemsAdapter2(private val items: List<Item>) : RecyclerView.Adapter<ItemsV
     }
 
     override fun onBindViewHolder(holder: ItemsViewHolder2, position: Int) {
-        viewBinderHelper.bind(holder.swipeRevealLayout, position.toString())
+        viewBinderHelper.bind(holder.swipeRevealLayout, items[position].id)
         holder.bind(items[position])
     }
 }
